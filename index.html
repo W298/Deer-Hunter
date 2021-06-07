@@ -11,16 +11,25 @@
 
     <style>
         .sidenav {
-            width: 24vw;
+            width: 23vw;
             position: fixed;
             z-index: 1;
-            margin: 1rem;
+        }
+
+        .topnav {
+
+        }
+
+        .col_menu {
+
         }
 
         .main {
-            padding: 1rem;
-            padding-left: 0rem;
-            margin-left: calc(24vw + 2rem);
+            margin-left: calc(3rem + 23vw);
+        }
+
+        .main_small {
+
         }
 
         .rounded-A {
@@ -31,11 +40,14 @@
             font-size: calc(1rem + 1.5vw);
             font-weight: 1000;
         }
-    </style>
 
-    <div class="collapse.show" id="collapseSideBar">    
-    <div class="sidenav d-none d-sm-none d-md-block">
-        <div class="card bg-secondary text-white rounded-A shadow">
+        h2 {
+            font-size: calc(1rem + 1.2vw);
+            font-weight: 600;
+        }
+    </style>
+  
+        <div class="sidenav d-none d-sm-none d-md-block card bg-secondary text-white rounded-A shadow m-4 mt-0">
             <div class="container-fluid p-2">
                 <div class="row px-3 py-5">
                     <h1>DEER<br>HUNTER</h1>
@@ -57,11 +69,27 @@
                 </div>
             </div>
         </div>
-    </div>
+
+        <div class="topnav d-block d-sm-block d-md-none card bg-secondary text-white rounded-A shadow m-3">
+            <div class="card-body">
+                <h1>DEER HUNTER</h1>
+                <a class="btn btn-primary" 
+                                    data-bs-toggle="collapse"
+                                    href="#collapsedMenu"
+                                    role="button" aria-expanded="false"
+                                    aria-controls="collapsedMenu">Open</a>
+            </div>
+        </div>
+
+    <div class="collapse" id="collapsedMenu">
+        <div class="card bg-secondary text-white rounded-A shadow col_menu m-4">
+            <div class="card-body">
+                <h2> Collapsed Menu! </h2>
+            </div>
+        </div>
     </div>
 
-    <div class="main">
-        <div class="card bg-secondary text-white rounded-A shadow">
+        <div class="main d-none d-sm-none d-md-block card bg-secondary text-white rounded-A shadow my-4 me-4">
             <div class="container-fluid p-2">
                 <div class="row px-2">
                     <div class="col-md-4 col-sm-6 p-2 g-1">
@@ -87,32 +115,52 @@
                     <div class="col-md-4 col-sm-6 p-2 g-1">
                         <div class="card bg-primary text-white rounded-A shadow">
                             <div class="card-body">
-                                <a class="btn btn-primary" 
-                                    data-bs-toggle="collapse"
-                                    href="#collapseSideBar"
-                                    role="button" aria-expanded="false"
-                                    aria-controls="collapseSideBar">Collapse</a>
-                                <button 
-                                    onclick="manual_collapse_sidebar();"
-                                    class="btn btn-secondary">Col</button>
+                                Deer Hunter!
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+
+
+        <div class="main_small d-block d-sm-block d-md-none card bg-secondary text-white rounded-A shadow m-3">
+            <div class="container-fluid p-2">
+                <div class="row px-2">
+                    <div class="col-md-4 col-sm-6 p-2 g-1">
+                        <div class="card bg-primary text-white rounded-A shadow">
+                            <div class="card-body">Today's Recommend Food!</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 p-2 g-1">
+                        <div class="card bg-primary text-white rounded-A shadow">
+                            <div class="card-body">Top Critial Increasing Food!</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 p-2 g-1">
+                        <div class="card bg-primary text-white rounded-A shadow">
+                            <div class="card-body">Top Healing Food!</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 p-2 g-1">
+                        <div class="card bg-primary text-white rounded-A shadow">
+                            <div class="card-body">Favorite Food!</div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 p-2 g-1">
+                        <div class="card bg-primary text-white rounded-A shadow">
+                            <div class="card-body">
+                                Deer Hunter!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 <!-- Boostrap + Popper Scripts-->
         <script src="./js/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="./js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
-
-    <script>
-        function manual_collapse_sidebar() {
-            $("#collapseSideBar").hide();
-            $(".main").css("margin-left", "1rem");
-        }
-    </script>
 
     </body>
 
