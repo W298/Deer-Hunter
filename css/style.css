@@ -30,6 +30,22 @@ body {
 	border-radius: 1rem;
 }
 
+/* Blue Version */
+
+.bg-A {
+	background-color: #212440;
+}
+
+.bg-B {
+	background-color: #262948;
+}
+
+.bg-C {
+	background-color: #2e3257;
+}
+
+/* Wood Version
+
 .bg-A {
 	background-color: #402e28;
 }
@@ -42,6 +58,23 @@ body {
 	background-color: #563f36;
 }
 
+*/
+
+/* Black Version
+
+.bg-A {
+	background-color: #343434;
+}
+
+.bg-B {
+	background-color: #3d3d3d;
+}
+
+.bg-C {
+	background-color: #4d4d4d;
+}
+
+*/
 
 h1 {
 	font-size: calc(1rem + 3vw);
