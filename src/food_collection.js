@@ -1,6 +1,6 @@
 function CreateFoodCard(header, body) {
     var colDiv = document.createElement("div");
-    colDiv.className = "col-md-3 col-sm-4 col-xs-6 col-xl-2 mx-0 my-2";
+    colDiv.className = "col-md-3 col-sm-4 col-6 col-xl-2 mx-0 my-2";
     
     var cardDiv = document.createElement("div");
     cardDiv.className = "card bg-C text-white rounded-A shadow";
