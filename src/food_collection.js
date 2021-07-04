@@ -18,37 +18,46 @@ function CreateFoodCard(header, body) {
     inContainer.className = "container-fluid p-0"
     
     var inUpRow = document.createElement("div");
-    inUpRow.className = "row";
+    inUpRow.className = "row px-1";
     
     var inUpLeftCol = document.createElement("div");
-    inUpLeftCol.className = "col-9 pe-2";
+    inUpLeftCol.className = "col-8 px-3 pe-1";
     
     var inUpRightCol = document.createElement("div");
-    inUpRightCol.className = "col-3 ps-0";
+    inUpRightCol.className = "col-4 px-2 ps-2";
     
     var inDownRow = document.createElement("div");
     inDownRow.className = "row";
     
     var inDownCol = document.createElement("div");
-    inDownCol.className = "col pt-2";
+    inDownCol.className = "col pt-2 px-2 text-center";
     
     var foodImg = document.createElement("img");
     foodImg.setAttribute("src", body);
     foodImg.className = "rounded-A img-fluid";
+    foodImg.setAttribute("style", "margin-left")
     
     var img2 = document.createElement("img");
-    img2.setAttribute("src", body);
-    img2.className = "rounded-A img-fluid";
+    img2.setAttribute("src", "/asset/attack.webp");
+    img2.className = "img-fluid p-1";
     
     var img3 = document.createElement("img");
-    img3.setAttribute("src", "/asset/ex_prop.webp");
-    img3.className = "rounded-A img-fluid";
-    img3.setAttribute("style", "height: 2.2rem;");
+    img3.setAttribute("src", "/asset/crip.webp");
+    img3.className = "img-fluid p-1";
+    
+    for (let i = 0; i < 4; i++) {
+    	let pr = document.createElement("img");
+    	pr.setAttribute("src", "/asset/ex_prop.webp");
+    	pr.className = "rounded-A img-fluid";
+    	pr.setAttribute("style", "width: 20%; margin-left: 1.5%; margin-right: 1.5%");
+    	
+    	inDownCol.appendChild(pr);
+    }
     
     inUpLeftCol.appendChild(foodImg);
     inUpRightCol.appendChild(img2);
-    
-    inDownCol.appendChild(img3);
+    inUpRightCol.appendChild(img3);
+ 
     inDownRow.appendChild(inDownCol);
 
 	inUpRow.appendChild(inUpLeftCol);

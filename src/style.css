@@ -30,6 +30,10 @@ body {
 	border-radius: 1rem;
 }
 
+.rounded-B {
+	border-radius: 0.5rem;
+}
+
 /* Blue Version */
 
 .bg-A {
