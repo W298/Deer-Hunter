@@ -16,7 +16,7 @@ function CreateFoodCard(header, body) {
     
     var foodImg = document.createElement("img");
     foodImg.setAttribute("src", body);
-    foodImg.setAttribute("style", "width: 20%;");
+    foodImg.setAttribute("style", "width: 100%;");
 
     bodyDiv.appendChild(foodImg);
     headerDiv.appendChild(headerH3);
@@ -29,11 +29,11 @@ function CreateFoodCard(header, body) {
 
 function LoadFoodCardData() {
     var dict = {}
-    dict["비옥야채쌈1"] = "IMG_0538.JPG";
-    dict["비옥야채쌈2"] = "IMG_0538.JPG";
-    dict["비옥야채쌈3"] = "IMG_0538.JPG";
-    dict["비옥야채쌈4"] = "IMG_0538.JPG";
-    dict["비옥야채쌈5"] = "IMG_0538.JPG";
+    dict["비옥야채쌈1"] = "/asset/example.jpeg";
+    dict["비옥야채쌈2"] = "/asset/example.jpeg";
+    dict["비옥야채쌈3"] = "/asset/example.jpeg";
+    dict["비옥야채쌈4"] = "/asset/example.jpeg";
+    dict["비옥야채쌈5"] = "/asset/example.jpeg";
     
     for (var header in dict) {
         CreateFoodCard(header, dict[header]);
